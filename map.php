@@ -1,5 +1,4 @@
 <?php
-  require('partial/header.php');
   include 'connect.php';
  
     session_start();
@@ -45,13 +44,18 @@
   <head>
     <meta name="viewport"
         content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Digital Food Map</title>
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+      
     <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 100% }
+      #map-canvas { height: 90% }
     </style>
       
-    
     <script type="text/javascript">
       function initMap() {
         var mapOptions = {
@@ -85,9 +89,19 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo $apikey; ?>&callback=initMap"
-  type="text/javascript"></script>
+  type="text/javascript"></script>  
   </head>
+    
   <body>
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="index.php">
+          <img src="img/logo.png" height="40px" width="40px"/> Digital Food Map
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Admin Login</a>
+      </div>
+    </nav>  
+    
     <div id="map-canvas"/>
   </body>
 </html>
@@ -95,7 +109,7 @@
     <?php       
         mysqli_free_result($output);
         //close connection//
-        mysqli_close($connect);
+        mysqli_close($con);
 
         }
      require('partial/footer.php');

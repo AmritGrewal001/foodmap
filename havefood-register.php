@@ -1,8 +1,6 @@
 <?php
  require('partial/header.php');
-
 require('connect.php');
-
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['name'])){
     // removes backslashes
@@ -16,8 +14,8 @@ if (isset($_REQUEST['name'])){
     $cell = stripslashes($_REQUEST['cell']);
 	$cell = mysqli_real_escape_string($con,$cell);
 
-        $query = "INSERT into users (name, password, email, cell)
-VALUES ('$name', '$password', '$email', '$cell')";
+        $query = "INSERT into users (name, email, password, cell)
+VALUES ('$name', '$email', '$password', '$cell')";
         $result = mysqli_query($con,$query);
         if($result){
             echo "<div class='form' style='padding-top:10%; padding-bottom:10%; margin:5%; text-align: center;'>
@@ -45,7 +43,7 @@ VALUES ('$name', '$password', '$email', '$cell')";
             <input type="text" id="inputCell" name="cell" class="form-control" placeholder="Cell Number">
           <div class="checkbox mb-3">
             <label>
-              <input type="checkbox" value="remember-me"> Accept our privacy policy, terms and conditions.
+              <input type="checkbox"> Accept our privacy policy, terms and conditions.
             </label>
           </div>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign-up</button>
