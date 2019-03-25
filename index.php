@@ -9,7 +9,7 @@
     <br><br>
     <p class="lead font-weight-normal">This is a one stop site for anyone who need food, willing to help someone by providing food or even volunteer to deliver food.</p><p> Select your purpose to vist the site by clicking the one of the following buttons...</p><br>
     <a class="btn btn-primary" href="needfood.php">Need Food</a>
-    <a class="btn btn-primary" href="havefood.php">Have Food</a>
+    <a class="btn btn-primary" href="havefood-login.php">Have Food</a>
     <a class="btn btn-primary" href="movefood.php">Food Movers</a>
   </div>
 </div>
