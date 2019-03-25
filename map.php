@@ -19,7 +19,6 @@
           $check=0;
           $mess="";
           $row= mysqli_fetch_assoc($output);
-          $santaMessage= $row["city"] + $row["ID"];
           $apikey = "AIzaSyAeZ8t82WAtGygbtLtcZgoME5BhJShmho8";
           $id = $row["ID"];
           $lat = 0;
