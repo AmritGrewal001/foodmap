@@ -10,14 +10,15 @@
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con,$password);
         //Checking is user existing in the database or not
-            $query = "SELECT * FROM users WHERE email='$email'
+            $query = "SELECT * FROM admin WHERE email='$email'
     and password='$password'";
         $result = mysqli_query($con,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
             if($rows==1){
             $_SESSION['email'] = $email;
                 // Redirect user
-            header("Location:http://localhost/map/havefood.php");
+//            header("Location:https://digitalfoodmap.ca/havefood.php");
+              header("Location:http://localhost/map/admin-dashboard.php");
 
                 }
                 else{
@@ -72,7 +73,7 @@
           </div>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
         </form><br>
-        <p>New Here? Please <a href="havefood-register.php">Register Here.</a></p>
+        <p>New Here? Please <a href="admin-register.php">Register Here.</a></p>
     </div>
         <div class="col-md-4 p-lg-4 my-4 "></div>
 </div>

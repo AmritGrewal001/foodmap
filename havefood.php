@@ -6,7 +6,7 @@
     <div class="col-md-4 p-lg-4 my-4 "></div>
     
     <div class="col-md-4 p-lg-4 my-4 ">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Add a food resource here</button>
+        <a href="/map/addfoodresource.php" class="btn btn-lg btn-primary btn-block">Add a food resource here</a>
     </div>
         <div class="col-md-4 p-lg-4 my-4 "></div>
 </div>

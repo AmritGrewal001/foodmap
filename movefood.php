@@ -3,7 +3,7 @@
 ?>
 
 <div class="col-md-5 p-lg-5 mx-auto my-5 bg-light">
-    <form class="form-signin">
+    <form class="form-signin" action="thanks.php">
       <h1 class="h3 mb-3 font-weight-normal text-center">Just your little information is needed.</h1>
       <label for="inputName" class="sr-only">Name</label>
       <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>    

@@ -11,6 +11,7 @@
     <a class="btn btn-primary" href="needfood.php">Need Food</a>
     <a class="btn btn-primary" href="havefood-login.php">Have Food</a>
     <a class="btn btn-primary" href="movefood.php">Food Movers</a>
+    <a class="btn btn-primary" href="foodevents.php">Food Events</a>
   </div>
 </div>
 

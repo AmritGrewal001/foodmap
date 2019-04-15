@@ -13,12 +13,14 @@ if (isset($_REQUEST['name'])){
 	$email = mysqli_real_escape_string($con,$email);
     $cell = stripslashes($_REQUEST['cell']);
 	$cell = mysqli_real_escape_string($con,$cell);
-    $query = "INSERT into users (name, email, password, cell) VALUES ('$name', '$email', '$password', '$cell')";
+
+        $query = "INSERT into admin (name, email, password, cell)
+VALUES ('$name', '$email', '$password', '$cell')";
         $result = mysqli_query($con,$query);
         if($result){
             echo "<div class='form' style='padding-top:10%; padding-bottom:10%; margin:5%; text-align: center;'>
 <h3>You are registered successfully.</h3>
-<br/>Click here to <a href='havefood-login.php'>Login</a></div>";
+<br/>Click here to <a href='admin-login.php'>Login</a></div>";
         }
     }else{
 ?>
@@ -46,7 +48,7 @@ if (isset($_REQUEST['name'])){
           </div>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign-up</button>
         </form><br>
-        <p>Already registered? Please <a href="havefood-login.php">Login Here.</a></p>
+        <p>Already registered? Please <a href="admin-login.php">Login Here.</a></p>
     </div>
         <div class="col-md-4 p-lg-4 my-4 "></div>
 </div>
